@@ -1,2 +1,2 @@
 # ViMart
-Created with CodeSandbox
+Assessment Project for Software Developer position at SocialBoat.
