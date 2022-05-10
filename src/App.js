@@ -1,11 +1,12 @@
-import './App.scss';
+import "./App.scss";
+import HomePage from "./pages/homePage";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+	return (
+		<div className="App">
+			<HomePage />
+		</div>
+	);
 }
 
 export default App;
