@@ -50,11 +50,11 @@ function Home() {
                 )}
                 {
                     !loading && cardData?.map((item, idx) =>
-                        <Card key={idx} card={item} />
+                        <Card key={idx} card={item} q={q} />
                     )
                 }
                 {
-                    !loading && JSON.stringify(cardData) === undefined ? 
+                    !loading && JSON.stringify(cardData) === undefined ?
                         (
                             <div className='no_data'>
                                 Wow Such Empty <span>.</span> <span>.</span> <span>.</span> <span>.</span>

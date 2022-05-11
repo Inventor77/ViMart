@@ -1,0 +1,52 @@
+@mixin center {
+	display: flex;
+	justify-content: center;
+}
+$font-stack: "Roboto", serif;
+
+.card {
+	width: 352px;
+	background: #161616;
+	height: 380px;
+	padding: 0px 16px;
+	border-radius: 5px;
+	font-family: $font-stack;
+	.card_info {
+		@include center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+		padding-top: 16px;
+
+		.card_title {
+			font-size: 18px;
+			font-weight: 700;
+			color: #fff;
+			opacity: 0.6;
+			text-transform: capitalize;
+		}
+		.card_desc {
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			opacity: 0.4;
+		}
+		.card_tags {
+			font-size: 14px;
+			font-weight: 900;
+			color: #fff;
+            @include center;
+            justify-content: flex-start;
+            gap: 8px;
+            flex-wrap: wrap;
+			.tag {
+				font-size: 12.5px;
+				font-weight: 900;
+				color: #000;
+				background: #0ff;
+                padding: 3px 8px;
+                border-radius: 16px;
+			}
+		}
+	}
+}
