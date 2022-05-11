@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Nav from '../../components/Nav/Nav'
 import './Home.scss'
 import { URLContext } from '../../context/URLContext'
+import Card from '../../components/Card/Card'
 
 function Home() {
-    const [q, setQ] = useState("sam")
+    const [q, setQ] = useState("")
     const [numResults, setNumResults] = useState(5);
-    const [cardData, setCardData] = useState("")
+    const [cardData, setCardData] = useState([])
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(true)
 
@@ -15,7 +16,7 @@ function Home() {
         try {
             let res = await fetch(url);
             let data = await res.json();
-            setCardData(data);
+            setCardData(data.results);
             setLoading(false);
         } catch (error) {
             setError(error)
@@ -42,11 +43,23 @@ function Home() {
                 )}
                 {error && (
                     <div className='error'>
-                        {error}
+                        <pre>
+                            {JSON.stringify(error, null, 3)}
+                        </pre>
                     </div>
                 )}
                 {
-                    <pre style={{ color: "#fff" }}>{JSON.stringify(cardData.results, null, 3)}</pre>
+                    !loading && cardData?.map((item, idx) =>
+                        <Card key={idx} card={item} />
+                    )
+                }
+                {
+                    !loading && JSON.stringify(cardData) === undefined ? 
+                        (
+                            <div className='no_data'>
+                                Wow Such Empty <span>.</span> <span>.</span> <span>.</span> <span>.</span>
+                            </div>
+                        ) : ""
                 }
             </section>
         </div>

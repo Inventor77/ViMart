@@ -10,7 +10,17 @@ $font-stack: "Roboto", serif;
 	height: 100%;
 	padding: 64px 48px;
 	@include center;
-	.loading {
+	.error {
+		pre {
+			font-family: $font-stack;
+			font-size: 16px;
+			font-weight: 700;
+			color: #f00;
+
+		}
+	}
+	.loading,
+	.no_data {
 		font-family: $font-stack;
 		font-size: 36px;
 		font-weight: 900;
@@ -20,13 +30,13 @@ $font-stack: "Roboto", serif;
 			display: inline-block;
 			animation: bounce 1s infinite;
 			&:nth-of-type(2) {
-				animation-delay: 0.5s;
+				animation-delay: 0.25s;
 			}
 			&:nth-of-type(3) {
-				animation-delay: 1s;
+				animation-delay: 0.5s;
 			}
 			&:nth-of-type(4) {
-				animation-delay: 1.5s;
+				animation-delay: 0.75s;
 			}
 		}
 	}
@@ -37,7 +47,7 @@ $font-stack: "Roboto", serif;
 		transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(-8px);
+		transform: translateY(-7px);
 	}
 	100% {
 		transform: translateY(0px);

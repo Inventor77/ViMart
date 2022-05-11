@@ -1,9 +1,16 @@
 import React from 'react'
 
-function Card() {
+function Card({card}) {
     return (
-        <div>
+        <div className="card">
+            <div className='video_container'>
 
+            </div>
+            <div className='card_info'>
+                <div className='card_title'>
+
+                </div>
+            </div>
         </div>
     )
 }
