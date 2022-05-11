@@ -12,12 +12,14 @@ function Nav() {
             <div className='logo_container'>
                 <Logo />
             </div>
-            <div className='filter_container'>
-                <SearchInput />
-                <Dropdown />
-            </div>
-            <div className='profile_container'>
-                <Profile />
+            <div className='nav_right'>
+                <div className='profile_container'>
+                    <Profile />
+                </div>
+                <div className='filter_container'>
+                    <SearchInput />
+                    <Dropdown />
+                </div>
             </div>
         </div>
     )

@@ -19,9 +19,49 @@
 		@include center;
 		height: 100%;
 	}
-	.filter_container {
+	.nav_right {
 		@include center;
-		justify-content: flex-start;
-		flex-wrap: nowrap;
+		justify-content: space-between;
+		flex-basis: 65%;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		gap: 16px;
+		.filter_container {
+			@include center;
+			justify-content: flex-start;
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1096px) {
+	/* For mobile phones: */
+	.nav {
+		.nav_right{
+			flex-basis: 80%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.nav {
+		height: 148px;
+		.logo_container {
+			position: relative;
+			transform: translateY(-25%);
+		}
+		.nav_right {
+			position: absolute;
+			right: 24px;
+			transform: translateY(-60%);
+			flex-basis: 50%;
+			.filter_container {
+				position: absolute;
+				top: 135%;
+				// left: -55%;
+			}
+		}
 	}
 }

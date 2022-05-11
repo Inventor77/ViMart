@@ -6,6 +6,9 @@ function Home() {
     return (
         <div>
             <Nav />
+            <section className='card_container'>
+                
+            </section>
         </div>
     )
 }
