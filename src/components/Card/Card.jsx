@@ -4,7 +4,6 @@ import './Card.scss'
 function Card({ card, q }) {
     return (
         <div className="card">
-            {console.log(card)}
             <div className='video_container'>
                 <video width="320" height="240" controls>
                     <source src={card.video} type="video/mp4" />
