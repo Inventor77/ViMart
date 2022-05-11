@@ -1,0 +1,15 @@
+.search-bar {
+	width: 500px;
+}
+
+.search-bar input {
+	background: white;
+	padding: 7px 28px;
+	font-size: 14px;
+	border-radius: 4px;
+	outline: none;
+	box-shadow: 0px 4px 5px 0px rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(255, 255, 255, .8);
+	width: calc(100% - 36px);
+    height: 38px;
+}

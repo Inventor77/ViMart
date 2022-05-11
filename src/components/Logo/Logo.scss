@@ -9,6 +9,8 @@ $font-stack: "Roboto", serif;
 	font-weight: bolder;
 	letter-spacing: 3px;
 	z-index: 0;
+	user-select: none;
+	cursor: pointer;
 
 	&::before {
 		content: attr(data-text);
