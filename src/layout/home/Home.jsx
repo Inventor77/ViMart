@@ -37,7 +37,7 @@ function Home() {
             <section className='card_container'>
                 {loading && (
                     <div className='loading'>
-                        Loading<span>.</span><span>.</span><span>.</span><span>.</span>
+                        Loading <span>.</span> <span>.</span> <span>.</span> <span>.</span>
                     </div>
                 )}
                 {error && (
