@@ -13,8 +13,8 @@ $font-stack: "Roboto", serif;
 	&::before {
 		content: attr(data-text);
 		position: absolute;
-		top: -2.5px;
-		left: 2.5px;
+		top: -2px;
+		left: 2px;
 		color: #e00;
 		-webkit-text-stroke: 1px #161616;
 		z-index: 1;
