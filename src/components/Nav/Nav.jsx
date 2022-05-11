@@ -6,7 +6,9 @@ function Nav() {
     return (
         <div className='nav'>
             <div className='logo_container'>
-                {/* <img src={Logo} alt='logo' /> */}
+                {/* <img 
+                src={Logo}
+                alt='logo' /> */}
             </div>
         </div>
     )

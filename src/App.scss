@@ -4,7 +4,13 @@
 	box-sizing: border-box;
 }
 
-.App{
+body {
+	background: #262626;
+	height: 100%;
 	width: 100%;
+}
+
+.App {
+	width: 100vw;
 	height: 100%;
 }
