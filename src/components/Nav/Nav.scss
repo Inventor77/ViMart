@@ -12,6 +12,7 @@
 	background: #161616;
 	@include center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	padding: 0px 48px;
 	box-shadow: 0px 4px 20px -10px rgba(136, 136, 136, 0.5);
 	.logo_container {
