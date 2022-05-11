@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Dropdown.scss'
+import { URLContext } from '../../../context/URLContext'
 
 function Dropdown() {
     const [inputValue, setInputValue] = useState("")
-
+    const { setNumResults } = useContext(URLContext);
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
         setInputValue(value);
+        setNumResults(value);
+        console.log(setNumResults)
     }
     return (
         <form className='drop-down'>

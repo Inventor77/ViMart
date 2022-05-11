@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './SearchInput.scss'
+import { URLContext } from '../../../context/URLContext'
 
 function SearchInput() {
-    const [inputValue, setInputValue] = useState("")
+    const [inputValue, setInputValue] = useState("");
+    const { setQ } = useContext(URLContext);
 
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
         setInputValue(value);
+        setQ(value);
     }
     return (
         <form className='search-bar'>

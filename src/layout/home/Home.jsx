@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Nav from '../../components/Nav/Nav'
 import './Home.scss'
-
+import { URLContext } from '../../context/URLContext'
 
 function Home() {
     const [q, setQ] = useState("sam")
@@ -25,12 +25,15 @@ function Home() {
 
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [numResults, q])
 
 
     return (
         <div>
-            <Nav />
+            <URLContext.Provider
+                value={{ setNumResults, setQ }}>
+                <Nav />
+            </URLContext.Provider>
             <section className='card_container'>
                 {loading && (
                     <div className='loading'>
