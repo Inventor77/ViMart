@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropdown from '../Filter/Dropdown/Dropdown'
 import SearchInput from '../Filter/Search/SearchInput'
 import Logo from '../Logo/Logo'
 import Profile from '../Profile/Profile'
@@ -13,6 +14,7 @@ function Nav() {
             </div>
             <div className='filter_container'>
                 <SearchInput />
+                <Dropdown />
             </div>
             <div className='profile_container'>
                 <Profile />
